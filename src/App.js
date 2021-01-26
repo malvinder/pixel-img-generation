@@ -27,7 +27,7 @@ const App = memo(() => {
         cols.push(
           <div
             className="col"
-            key={`sub-${j}`}
+            key={`col-${j}`}
             onClick={() => setColor(j, i)}
             style={{backgroundColor: getColor(j, i)}} />
         );
