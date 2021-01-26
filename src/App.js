@@ -10,7 +10,7 @@ const App = memo(() => {
   </div>);
 
   const getColor = (row, col) => {
-    return `rgb(${row},${col},${0})`;
+    return `rgb(${row},${col},${128})`;
   };
 
   const setColor = (row, col) => {
