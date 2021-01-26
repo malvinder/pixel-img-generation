@@ -10,11 +10,7 @@ const App = memo(() => {
   </div>);
 
   const getColor = (row, col) => {
-    const red = Math.floor(col / height * width);
-    const green = Math.floor(col / (Math.floor(height * Math.random())) + Math.floor(Math.random() * width));
-    const blue = Math.floor((1 - (row + 1) / (height + 1)) * height);
-
-    return `rgb(${red},${green},${blue})`;
+    return `rgb(${row},${col},${0})`;
   };
 
   const setColor = (row, col) => {
