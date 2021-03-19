@@ -17,8 +17,9 @@ const App = memo(() => {
     document.body.style.backgroundColor = getColor(row, col);
   };
 
-  const generateImage = () => {
+  /*const generateImage = () => {
     const rows = [];
+
     for (let i = 1; i < height; i++) {
       const cols = [];
 
@@ -41,6 +42,18 @@ const App = memo(() => {
     }
 
     setImg(rows);
+  };*/
+
+  const generateImage = () => {
+    const canvas = document.getElementById('paletteCanvas');
+    const ctx = canvas.getContext('2d');
+
+    for (let i=0; i<width; i++) {
+      for (let j=0; j<height; j++) {
+        ctx.fillStyle = `rgb(${i}, ${j},128)`;
+        ctx.fillRect(i, j, height, width);
+      }
+    }
   };
 
   useEffect(() => {
@@ -49,7 +62,7 @@ const App = memo(() => {
 
   return (
     <div className="palette">
-      {img}
+      <canvas id="paletteCanvas" width={width} height={height} />
     </div>
   );
 });
