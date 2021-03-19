@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`rendering ColorPalette should render my canvas with colors 1`] = `
+Array [
+  <div
+    className="palette"
+  >
+    <canvas
+      height={128}
+      width={256}
+    />
+  </div>,
+]
+`;
